@@ -1,0 +1,41 @@
+/*layout*/
+
+body {
+  display: grid; /*torna o body uma grid container*/
+
+  grid-template-areas: /*especifica a área dentro da grid*/
+    "header header header" /* primeira linha é composta pelo cabeçalho*/
+    "main main aside" /*segunda linha é composta pelo main na esquerda e o aside na direita*/
+    "footer footer footer"; /*terceira linha é composta apenas pelo rodapé*/
+  /* área em três colunas: o main é duas vezes maior que o aside, por isso é repetido duas vezes*/
+
+  grid-gap: 20px; /*espaço entre os elementos da grid*/
+
+  grid-template-columns: auto auto 25%; /*tamanho de cada coluna */
+
+  grid-template-rows: auto auto auto; /*tamanho de cada linha*/
+}
+
+.grid-header {
+  grid-area: header; /*especifica a lacuna que o elemento header pertence*/
+}
+
+.grid-aside {
+  grid-area: aside; /*especifica a lacuna que o elemento aside pertence*/
+}
+
+.grid-main {
+  grid-area: main; /*especifica a lacuna que o elemento main pertence*/
+}
+
+.grid-footer {
+  grid-area: footer; /*especifica a lacuna que o elemento footer pertence*/
+}
+
+.grid-header,
+.grid-aside,
+.grid-aside2,
+.grid-main,
+.grid-footer {
+  background-color: lightgray; /*coloquei uma corzinha pra você enxergar o que aconteceu*/
+}
